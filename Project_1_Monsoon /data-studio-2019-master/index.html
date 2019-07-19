@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <!-- Your CSS files -->
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+      
+    <title>Lede page</title>
+  </head>
+
+  <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
+
+    <div class="header">
+      <p class="kicker">INDIAN MONSOON DATA</p>
+      <h1 class="headline">Visualizing the analysis behind monsoon headlines</h1>
+      <h2 class="subhead">2019 has been a tricky year for the Indian summer monsoon and the many that rely on it for their lives and livelihoods. What can an analysis of 145 years of data tell us about what could be happening right now? </h2>
+      <p class="byline">By Kasturi Pananjady</p>
+      <p class="date">Published July 18, 2019</p>
+    </div>
+
+    <div class="story-body">
+      <p class="body-text serif">It's summer in India, and anxiety about the monsoon is running high. Chennai, a highly populated South Indian state capital, suffered severe water shortages last month, a bad omen for the rest of the country. This project goes into monsoon headlines and tries to visualize the analysis that went into their creation.</p>
+      <p class="body-text serif">In these visualizations and analyses, I'm using all India monthly rainfall data in tenths of milimeters compiled by the Indian Institute of Tropical Metereology. The data run from 1871-2016, which is great, but is in ugly pdf form, which is not so great. If you want the csv file find it in my github repo!</p>
+
+      <div class="photo-section">
+        <div class="photo">
+          <img src="images/image_1.png" alt="dog" />
+          <p class="caption">Chasing monsoon 2019: July deficit means 90% chance of falling below normal (Richard Mahapatra/Downtoearth.org/July 2019)</p>
+        </div>
+        <div class="photo">
+          <img src="images/image_2.png" alt="dog" />
+          <p class="caption">Normal rainfall measure may be lowered (Jacob Koshy/The Hindu/July 2019)</p>
+        </div>
+        <div class="photo">
+          <img src="images/image_3.png" alt="dog" />
+          <p class="caption">Drought Concerns Ease as India Receives Above Average Monsoon Rainfall for First Time Since June (Rajendra Jadhav/Reuters/July 2019)</p>
+        </div>
+      </div>
+
+      <div class="chart-section">
+        <p class="chart-title">Some definitions. What is the monsoon?</p>
+        <p class="chart-subhead">This is an uninspired scrawl to get a quick glimpse of what rains in India have looked like over the past ten years. </p>
+        <div class="chart-row">
+          <div class="chart">
+            <img src="images/monsoon_last_10.png"/>
+          </div>
+        </div>
+        <p class="chart-source">Sources: Indian Institute of Tropical Metereology</p>
+      </div>
+
+      <div class="story-body">
+        <p class="body-text serif">From this graph, the monsoon looks charmingly regular. But while rains over a year follow general peaks and troughs, we're only really interested in the summer months.</p>
+
+      <div class="chart-section">
+        <p class="chart-title">June, July, August and September are the monsoon months, and it's their variability that we care about.</p>
+        <p class="chart-subhead">From this graph, we can see that June and September have the highest variability of any of the monsoon months, which July and August typically receive the most rain.</p>
+        <div class="chart-row">
+          <div class="chart">
+            <img src="images/month_distribution.png"/>
+          </div>
+        </div>
+        <p class="chart-source">Sources: Indian Institute of Tropical Metereology</p>
+      </div>
+      
+      <p class="chart-title">But this leaves out how these distributions occured across the years. Does below monthly average rain in June mean that you'll definitely have below monthly average rain in July, and so on and so forth?</p>
+      <p class="chart-subhead">From this graph, we can see that below average rain in June  doesn't necessarily mean that you'll have below average rain in July. That's good news for us in 2019.</p>
+      <div class="chart-row">
+        <div class="chart">
+          <img src="images/JJAS_avgs.png"/>
+        </div>
+      </div>
+      <p class="chart-source">Sources: Indian Institute of Tropical Metereology</p>
+    </div>
+
+      <div class="chart-section">
+        <p class="chart-title">One last set of definitions: What is a drought year? What is a flood year?</p>
+        <p class="chart-subhead">The peaks above the topmost green line are floods, while the troughs under the bottom-most green line are droughts.</p>
+        <div class="chart-row">
+          <div class="chart">
+            <img src="images/JJAS_rolling_bounds.png"/>
+          </div>
+        </div>
+        <p class="chart-source">Sources: Indian Institute of Tropical Metereology</p>
+      </div>
+
+      <div class="story-body">
+        <p class="body-text serif">The red line in the middle represents the mean, and the green lines represent plus and minus 10 percent of the mean. The orange line, or the 11 year rolling mean, stays within those bounds. (More on that later.)</p>
+  
+      <h3 class="section-head serif">So what's all the hype about July rainfall?</h3>
+      <p class="body-text serif">Below average July rainfall is strongly correlated with drought. Here's June and August below, for comparison.</p>
+      <p class="body-text serif">This is why news outlets have been tracking July rainfall so closely.</p>
+
+      <div class="chart-section">
+        <p class="chart-title">July and August</p>
+        <div class="chart-row">
+          <div class="chart">
+            <p class="chart-label"></p>
+            <img src="images/july_corr.png"/>
+          </div>
+          <div class="chart">
+            <p class="chart-label"></p>
+            <img src="images/aug_corr.png"/>
+          </div>
+        </div>
+        <p class="chart-source">Indian Institute of Tropical Metereology</p>
+      </div>
+
+      <div class="chart-section">
+        <p class="chart-title">July and June</p>
+        <div class="chart-row">
+          <div class="chart">
+            <p class="chart-label"></p>
+            <img src="images/july_corr.png"/>
+          </div>
+          <div class="chart">
+            <p class="chart-label"></p>
+            <img src="images/june_corr.png"/>
+          </div>
+        </div>
+        <p class="chart-source">Indian Institute of Tropical Metereology</p>
+      </div>
+
+      <p class="body-text serif">This is why people sometimes talk about a July 15 deadline for the monsoon to cover the whole country.</p>
+    </div>
+    <div class="story-body">
+      <h3 class="section-head serif">One last thing.</h3>
+      <p class="body-text serif">Notice how those drought years are clustering towards the end there? Yeah. People hypothesize that it's because of climate change, and there's been talk in the papers of reducing what is considering normal rainfall in accordance with the 10-12 rolling mean. Yeah, that orange line.</p>
+    </div>
+
+    <div class="chart-section">
+      <p class="chart-title">See how the orange line snakes below the middle faint red one? That's what they're talking about.</p>
+      <p class="chart-subhead">The peaks above the topmost green line are floods, while the troughs under the bottom-most green line are droughts.</p>
+      <div class="chart-row">
+        <div class="chart">
+          <img src="images/JJAS_rolling_bounds.png"/>
+        </div>
+      </div>
+      <p class="chart-source">Sources: Indian Institute of Tropical Metereology</p>
+    </div>
+  
+
+    <div class="footer">
+      <p class="note">Note: D.R. Kothawale and M. Rajeevan. "Monthly, Seasonal and Annual Rainfall Time Series for All-India,
+        Homogeneous Regions and Meteorological Subdivisions: 1871-2016." Indian Institute of Tropical Meteorology (IITM), Research Report No. RR-138. August, 2017.</p>
+        <p class="note">The Weather Channel. “Monsoon Misses July 15 Deadline to Cover India, But More Rains in Offing for Southern India, Maharashtra.” The Weather Channel, The Weather Channel, 17 July 2019, weather.com/en-IN/india/monsoon/news/2019-07-16-monsoon-misses-july-15-deadline-to-cover-india.</p>
+        <p class="note">Koshy, Jacob. “Normal Rainfall Measure May Be Lowered.” The Hindu, The Hindu, 18 July 2019, www.thehindu.com/news/national/normal-rainfall-measure-may-be-lowered/article28528252.ece.</p>
+        <p class="note">Mahapatra, Richard. “Chasing Monsoon 2019: July Deficit Means 90% Chance of Falling below Normal.” Down To Earth, www.downtoearth.org.in/news/agriculture/chasing-monsoon-2019-july-deficit-means-90-chance-of-falling-below-normal-65353.</p>
+        <p class="note">“Drought Concerns Ease as India Receives Above Average Monsoon Rainfall for First Time Since June.” Reuters, News18, 10 July 2019, www.news18.com/news/india/india-receives-above-normal-rains-this-week-spurs-crop-planting-eases-concerns-of-drought-2225609.html.</p>
+      </div>
+  </body>
+</html>
